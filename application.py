@@ -3,6 +3,10 @@ from flask import (
 )
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
+
+import sys
+sys.path.append("/www/var/html")
+
 from database_setup import Base, Genre, Movie, User
 from flask import session as login_session  # added for login
 import random
@@ -15,6 +19,7 @@ import httplib2
 import json
 from flask import make_response
 import requests
+from config import DATABASE_URI
 
 
 app = Flask(__name__)
@@ -23,7 +28,7 @@ APPLICATION_NAME = "Catalog Application"
 
 # Connect to Database and create database session
 
-engine = create_engine('sqlite:///genremovie.db')
+engine = create_engine(DATABASE_URI)
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)

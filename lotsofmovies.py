@@ -2,8 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from database_setup import Genre, Base, Movie, User
+from config import DATABASE_URI
 
-engine = create_engine('sqlite:///genremovie.db')
+engine = create_engine(DATABASE_URI)
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
 Base.metadata.bind = engine
