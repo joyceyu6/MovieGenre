@@ -4,11 +4,11 @@ The purpose of the project was to take a Ubuntu Linux server instance on `Amazon
 
 ## How to run the web application
 Type in below IP address or URL in your web browser:
-### IP address
-http://54.244.56.151
+### IP address 
+[http://54.244.56.151](http://54.244.56.151)
 
 ### URL 
-54.244.56.151.xip.io
+[54.244.56.151.xip.io](54.244.56.151.xip.io)
 
 ## SSH log into server from client terminal:
 A superuser named `grader` was created and can access server with the private key submitted with this project. For example, below command in shell can get myself login as `grader`:
